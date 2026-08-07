@@ -66,7 +66,7 @@ Os invariantes de [01-design.md](01-design.md), resumidos:
 - direção de dependências nunca inverte (`Core ◄ Domain ◄ Api/Worker`; `Contracts` isolado)
 - nomenclatura `PaymentGateway.*`
 - teste **só de domínio** — teste de API ou integração é escopo excedido
-- sem comentários no código; nomes descritivos em português
+- nomes descritivos em português (comentários seus são anotações de estudo — o revisor não os aponta)
 - nenhuma fonte NuGet além de `nuget.org`
 - nada de trabalho antecipado de issue futura
 

@@ -36,9 +36,11 @@ colidiria com a entidade `Payment` e geraria `CS0118`.
 infraestrutura está **fora de escopo** deste estudo — se aparecer, sinalize como escopo
 excedido, não como acerto.
 
-**Sem comentários no código.** O nome deve carregar a intenção. Nomes descritivos em
-português são preferidos. Se um trecho só se entende com comentário, o problema é o nome
-ou o tamanho do método — aponte isso.
+**Comentários são do autor — não mexa.** Os comentários no código são anotações de
+estudo dele. **Nunca** aponte um comentário para remoção, nem como achado, nem de
+passagem. Nomes descritivos em português continuam sendo o esperado: o nome deve carregar
+a intenção por si só, mesmo quando há um comentário ao lado. Se um trecho *só* se entende
+pelo comentário, aponte o **nome** ou o tamanho do método — nunca o comentário.
 
 **Escopo da issue — regra dos dois lados.** O corpo da issue define o que você pode
 cobrar. Vale nas duas direções:
