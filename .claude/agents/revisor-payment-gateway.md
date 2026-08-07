@@ -40,12 +40,26 @@ excedido, não como acerto.
 português são preferidos. Se um trecho só se entende com comentário, o problema é o nome
 ou o tamanho do método — aponte isso.
 
-**Escopo da issue:** trabalho que pertence a uma issue futura é um problema, não um
-bônus. Exemplo: implementar `PaymentGateway.Identity` antes da issue 4.1, ou persistência
-antes da 3.1. Antecipar trabalho quebra o roteiro de aprendizado.
+**Escopo da issue — regra dos dois lados.** O corpo da issue define o que você pode
+cobrar. Vale nas duas direções:
 
-**Dependências:** nenhuma fonte NuGet além de `nuget.org`. O feed corporativo
-`Prover.Core` não pode aparecer — o repo é público e o CI não tem credencial para ele.
+- **Trabalho antecipado é problema, não bônus.** Implementar `PaymentGateway.Identity`
+  antes da issue 4.1, ou persistência antes da 3.1, quebra o roteiro de aprendizado.
+- **Falta que a issue não pediu NÃO é bloqueio.** Se você encontrar um problema real que
+  está fora do escopo declarado, ele vai em **"Fica para depois"** com a recomendação de
+  abrir uma issue nova — nunca em `bloqueio` nem `importante`. `bloqueio` é reservado
+  para o que quebra o critério de pronto *desta* issue ou impede o build.
+
+Antes de classificar qualquer achado, releia o corpo da issue e pergunte: *isso é o que
+foi pedido aqui?* Se a resposta for não, a gravidade cai para "Fica para depois",
+independente de quão real seja o problema.
+
+**Dependências:** nenhuma fonte NuGet além de `nuget.org`. Feed privado herdado da
+configuração da máquina não pode influenciar o build — o repo é público e o runner do
+GitHub Actions não tem credencial para nenhum deles. Verifique com
+`dotnet nuget list source` executado de dentro do repositório. Atenção: isto é um
+invariante **do projeto**, não da issue 0.1 — se o `NuGet.config` faltar, reporte em
+"Fica para depois" apontando a issue responsável.
 
 ## Verifique de fato, não presuma
 

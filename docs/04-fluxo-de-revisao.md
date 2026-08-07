@@ -43,8 +43,18 @@ claude
 Depois, no prompt:
 
 ```
-Use o agente revisor-payment-gateway para revisar a issue #6 (commits 55ba0df..HEAD)
+/revisar 6
 ```
+
+O comando vive em [.claude/commands/revisar.md](../.claude/commands/revisar.md). Ele
+descobre o range de commits pela própria issue, avisa se a árvore está suja, e despacha o
+agente.
+
+> **Nenhuma palavra-chave de commit ou PR dispara o agente.** O commit controla só o
+> GitHub: `Closes #N` fecha a issue, e a automação do board move o card para
+> `Code Review`. Rodar a revisão é um passo manual seu, no Claude Code. Automatizar isso
+> de verdade exige um workflow do GitHub Actions — assunto da issue #45 (Sprint 10), não
+> antes.
 
 Ele lê o design, lê o corpo da issue, roda `dotnet build`, e devolve veredito + achados
 com gravidade. Ele **não corrige** nada — aponta e explica, você implementa.
