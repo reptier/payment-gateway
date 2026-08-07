@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <File Path="NuGet.config" />
     <Project Path="src/PaymentGateway.Api/PaymentGateway.Api.csproj" />
     <Project Path="src/PaymentGateway.Contracts/PaymentGateway.Contracts.csproj" />
     <Project Path="src/PaymentGateway.Core/PaymentGateway.Core.csproj" />
